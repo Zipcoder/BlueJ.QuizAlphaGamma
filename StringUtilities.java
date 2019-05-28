@@ -58,6 +58,17 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        //Find the location of the last space
+        int startIndex = 0;
+        for(int i = sentence.length() - 1; i >= 0; i--){
+            if(sentence.charAt(i) == ' '){
+                startIndex = i + 1;
+                break;
+            }
+        }
+        
+        //Return substring from that last space
+        String result = sentence.substring(startIndex);
+        return result;
     }
 }
