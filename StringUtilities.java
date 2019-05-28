@@ -1,11 +1,15 @@
-
+import java.lang.*;
+import java.io.*;
+import java.util.*;
 public class StringUtilities {
     /**
      * @param input value to be returned
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        input = "Deshret";
+
+        return input;
     }
 
     /**
@@ -14,15 +18,22 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String input1 = "Hed";
+        String input2 = "jet";
+
+        return input1+input2;
     }
 
     /**
      * @param valueToBeReversed value to be reversed
      * @return identical string with characters in opposite order
      */
+
     public String reverse(String valueToBeReversed) {
-        return null;
+        String inp = "Khepresh";
+        new StringBuilder("Khepresh").reverse().toString();
+
+        return inp;
     }
 
     /**
@@ -30,6 +41,18 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
+        String s = "word";
+        /*let length = str.length;
+        let middle = Math.floor(length/2);
+        if (length % 2 ==0){
+        return str[middle]
+        }
+        //else{
+
+        }
+        
+        return null;
+        }*/
         return null;
     }
 

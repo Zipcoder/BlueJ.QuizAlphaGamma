@@ -53,6 +53,7 @@ public class StringUtilsRemoveCharacterTest {
 
         //Then
         assertEquals(expected, actual);
+       
     }
 
     @Test
