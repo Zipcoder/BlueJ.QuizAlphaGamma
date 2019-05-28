@@ -42,7 +42,6 @@ public class LoopFun
                   spaceInd = phrase.indexOf(' ', spaceInd + 1);
               }
           }
-          //System.out.println(phrase + "      " + sbuild.toString());
           return sbuild.toString().toUpperCase();
       }
 
@@ -59,19 +58,11 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          /*
-          for(int i = 97; i < 124; i++){
-              System.out.println(i + "     "  + (char)i);
-            }
-            */
           StringBuilder sbuild = new StringBuilder();
           for(int i = 0; i < word.length(); i++){
               int intVal = (int)(word.charAt(i)%97) + 3;
               sbuild.append((char)((intVal%26) + 97));
-              //System.out.println(word.charAt(i) + "       " + (intVal + 97) + "      " + (char)((intVal%97) + 97));
-              //System.out.println(word.charAt(i) + "      intVal: " + intVal);
           }
-          //System.out.println(word +  "        " + sbuild.toString());
           return sbuild.toString();
       }
 }

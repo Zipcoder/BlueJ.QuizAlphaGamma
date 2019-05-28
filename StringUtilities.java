@@ -48,7 +48,6 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        // come back and try with regex if time
         StringBuilder sbuild  = new StringBuilder();
         
         for(int i = 0; i < value.length(); i++){
@@ -64,19 +63,6 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        //String revSentence = reverse(sentence);
-        /*
-        int lastInd = reverse(sentence).indexOf(' ');
-        if(lastInd == -1){
-            return sentence;
-        }
-        else {
-            //lastInd = sentence.length() - lastInd;
-            return sentence.substring(sentence.length() - lastInd);
-        }
-        */
-       
-       
        int lastInd = sentence.lastIndexOf(' ') + 1;
        return sentence.substring(lastInd);
     }
