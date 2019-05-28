@@ -1,4 +1,5 @@
- 
+import java.util.Arrays;
+import java.util.*;
 
 public class LoopFun
 {
@@ -49,6 +50,20 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String[] letterArray = word.split("");
+          String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c"};
+          ArrayList<String> alteredArray = new ArrayList<String>();
+          
+          for (int i = 0; i < letterArray.length; i++){
+              int indx = Arrays.asList(alphabet).indexOf(letterArray[i]);
+              alteredArray.add(alphabet[indx + 3]);
+            }
+ 
+          String finalString = "";
+          for (String s : alteredArray){
+              finalString += s;
+            }
+         
+          return finalString;
       }
 }
