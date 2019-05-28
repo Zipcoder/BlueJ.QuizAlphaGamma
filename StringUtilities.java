@@ -65,6 +65,7 @@ public class StringUtilities {
      */
     public String getLastWord(String sentence) {
         //String revSentence = reverse(sentence);
+        /*
         int lastInd = reverse(sentence).indexOf(' ');
         if(lastInd == -1){
             return sentence;
@@ -73,6 +74,10 @@ public class StringUtilities {
             //lastInd = sentence.length() - lastInd;
             return sentence.substring(sentence.length() - lastInd);
         }
-        //return null;
+        */
+       
+       
+       int lastInd = sentence.lastIndexOf(' ') + 1;
+       return sentence.substring(lastInd);
     }
 }
