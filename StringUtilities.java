@@ -34,8 +34,7 @@ public class StringUtilities {
     public Character getMiddleCharacter(String word) {
         int middle = word.length() / 2;
         char characters[]=word.toCharArray();
-        return characters[middle];   
-        //not seeing a test method for this will come back and create
+        return characters[middle];  
     }
 
     /**
@@ -44,7 +43,11 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        int index = value.indexOf(charToRemove);
+        System.out.println(index + " index");
+        // need to do an if in case index = 0
+        return value.substring(0, index) + value.substring(index + 1);  
+        
     }
 
     /**
