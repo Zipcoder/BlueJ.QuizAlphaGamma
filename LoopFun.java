@@ -1,6 +1,4 @@
- 
-
-public class LoopFun
+ public class LoopFun
 {
 
       /**
@@ -27,8 +25,8 @@ public class LoopFun
           String answer = "";
           boolean nextWord = true;
           for(int i = 0; i < phrase.length(); i++){
-              if (phrase.substring(i, i+1).equals(" ") && nextWord){
-                  answer += phrase.substring(i, i+1);
+              if (!phrase.substring(i, i+1).equals(" ") && nextWord){
+                  answer = answer + phrase.substring(i, i+1);
                   nextWord = false;
               } else {
                   if(phrase.substring(i,i + 1).equals(" ") && !phrase.substring(i+1, i+2).equals(" ")){
@@ -36,7 +34,7 @@ public class LoopFun
                   }
               }
           }
-          return answer;
+          return answer.toUpperCase();
       }
 
       /**
@@ -52,6 +50,13 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          char[] encrypt = word.toCharArray();
+          for (char letter : encrypt) {
+              letter += 3;
+              if (letter > 'z'){
+                  letter -= 26;
+              }
+          }
+          return String.valueOf(encrypt);
       }
 }
