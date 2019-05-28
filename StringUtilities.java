@@ -35,15 +35,14 @@ public class StringUtilities {
      * @param word word to get middle character of
      * @return middle character of `word`
      */
-    /*public Character getMiddleCharacter(String word) {
-        int i = word.length();
-        Character midChar = "";
-        if((int i % 2 ) ==1){
-        StringBuffer result = new StringBuffer(word); 
-        midChar = result.((i - 1)/2).toString());
+    public Character getMiddleCharacter(String word) {
+        int stringLength = word.length();
+        int middleInd = stringLength/2;
+        Character midChar = word.charAt(middleInd);
+        return midChar;
+    
+        
     }
-        return null;
-    }*/
 
     /**
      * @param value value to have character removed from
