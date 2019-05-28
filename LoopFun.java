@@ -26,12 +26,23 @@ public class LoopFun
        */
       public String acronym(String phrase) {
           String myAns ="";
+          Character myChar;
+          Character myChar2;
           
-       //   for (Integer i = 0; i < phrase.length() - 1; i++) {
-       //       if ((phrase.charAt(i)).equals(" ") && (phrase.charAt(i).equals(" "))) {
-        //          
-       //         }
-       //     }
+          for (Integer i = 0; i < phrase.length() - 1; i++) {
+              myChar = phrase.charAt(i);
+              if ((myChar).equals(" "))  {
+                  for (Integer k = i+1; k<phrase.length();k++) {
+                      myChar2 = phrase.charAt(k);
+                      if (!(myChar.equals(" "))) {
+                          myAns = myAns + myChar2;
+                          break;
+                        }
+                      
+                  }
+                  
+                }
+            }
           
           myAns.toUpperCase();
           return myAns;
