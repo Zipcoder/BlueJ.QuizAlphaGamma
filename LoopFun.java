@@ -29,6 +29,11 @@ public class LoopFun
       public String acronym(String phrase) 
       {
           String answer = "";
+        
+        /* create a loop where I add the first letter to the String answer
+        * then add every letter after a space to the String answer
+        */
+        
           /*for (int i = 0; i < phrase.length(); i++)
           {
               answer.append(phrase.charAt(0)); //issue with append
