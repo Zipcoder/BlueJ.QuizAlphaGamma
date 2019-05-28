@@ -28,19 +28,15 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          Scanner in= new Scanner(System.in);
-          phrase= in.nextLine();
-          char current = phrase.charAt(0);
-          StringBuilder acro = new StringBuilder();
-          String acronym = "";
-          acro.append(current);
-          for (int i =1; i < phrase.length()-1; i++){
-               final char nextChar = phrase.charAt(i);
-               current += nextChar;
-               i++;
-            }
-          return acro.toString().toUpperCase();
-      }
+         Scanner in = new Scanner(System.in);
+         phrase= in.nextLine();
+          String [] acro = phrase.split(" ");
+          StringBuilder ac = new StringBuilder();
+            for (int i=0; i < acro.length; i++){
+                ac.append( acro[i].charAt(0));
+                
+      } return ac.toString().toUpperCase();
+    }
 
       /**
        * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
