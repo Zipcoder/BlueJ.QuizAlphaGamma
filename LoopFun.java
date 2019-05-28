@@ -1,4 +1,4 @@
- 
+  
 
 public class LoopFun
 {
@@ -9,8 +9,14 @@ public class LoopFun
        * @param number
        * @return the factorial of the number
        */
-      public Integer factorial(Integer number){
-          return null;
+      public Integer factorial(Integer number)
+      {
+         int answer = 1;
+         for (int i = 1;  i <= number; i++)
+         {
+             answer = answer * i;
+         }
+          return answer;
       }
 
       /**
@@ -20,8 +26,24 @@ public class LoopFun
        * @param phrase
        * @return Upper case string of the first letter of each word
        */
-      public String acronym(String phrase) {
-          return null;
+      public String acronym(String phrase) 
+      {
+          String answer = "";
+        
+        /* create a loop where I add the first letter to the String answer
+        * then add every letter after a space to the String answer
+        */
+        
+          /*for (int i = 0; i < phrase.length(); i++)
+          {
+              answer.append(phrase.charAt(0)); //issue with append
+              if(phrase.charAt(i) == ' ')
+              {
+                  ++i;
+                  answer.append((phrase).charAt(i));
+                }
+           }*/
+          return answer;
       }
 
       /**
@@ -36,7 +58,23 @@ public class LoopFun
        * @param word
        * @return the encrypted string by shifting each character by three character
        */
-      public String encrypt(String word) {
-          return null;
+      public String encrypt(String word) 
+      {
+          String answer = "";
+          int shift = 3;
+          int length = word.length();
+          for(int i = 0; i < length; i++)
+          {
+              char c = (char)(word.charAt(i) + shift);
+              if (c > 'z')
+                {
+                    answer += (char)(word.charAt(i) - (26-shift));
+                }
+              else
+                {
+                    answer += (char)(word.charAt(i) + shift);
+                }
+          }  
+          return answer;
       }
 }
