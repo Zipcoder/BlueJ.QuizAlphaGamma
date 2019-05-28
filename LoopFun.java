@@ -29,9 +29,10 @@
               String acronym = "";
               for (String word : words) {
                   char firstLetter = word.charAt(0);
-                  acronym += String.valueOf(firstLetter);
+                  String newLetter = String.valueOf(firstLetter);
+                  acronym += newLetter;
               }
-              return acronym;
+              return acronym.toUpperCase();
           }
     
           /**
