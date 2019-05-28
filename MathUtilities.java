@@ -1,5 +1,5 @@
  
-
+import java.util.Scanner;
 public class MathUtilities{
     
   /**
@@ -8,8 +8,10 @@ public class MathUtilities{
    * @param valueToAdd number
    * @return the sum of the two numbers
    */
+  
   public Integer add(Integer baseValue, Integer valueToAdd){
-      return null;
+      int sum = baseValue + valueToAdd;
+      return sum;
   }
 
   /**
@@ -19,7 +21,8 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+    double sum = baseValue + valueToAdd;
+    return sum;
   }
 
   /**
@@ -28,7 +31,8 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+      double half = number/2;
+      return half;
   }
 
   /**
@@ -37,7 +41,13 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      return null;
+    Boolean facts = false;  
+      if (number % 2 == 0){
+          facts = false;
+      } else {
+         facts = true;
+        }
+      return facts;
   }
 
 
@@ -47,7 +57,8 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
-      return null;
+      int product = number * number;
+      return product;
   }
 
 }
