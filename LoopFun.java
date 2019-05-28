@@ -1,4 +1,4 @@
- 
+
 
 public class LoopFun
 {
@@ -27,6 +27,7 @@ public class LoopFun
       public String acronym(String phrase) {
           String result = "";
           boolean s = true;
+          phrase = phrase.toUpperCase();
           for(int i = 0; i < phrase.length(); i++){
              if(phrase.charAt(i) == ' '){
               s = true;
