@@ -48,6 +48,33 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
-      }
+          String alp = "abcdefghijklmnopqrstuvwxyz";
+          String answer = "";
+   
+       
+       char[]alpChar= alp.toCharArray();
+       for(int i = 0;i < word.length()-1;i++){
+       for(int j = 0;j < alpChar.length-1;j++)
+           if (word.charAt(i) == alpChar[j]){
+           char holder =word.charAt(i);
+        word.replace(holder,alpChar[j+3]);
+        System.out.println(word);
+        System.out.println(holder);
+        }
+       
+    }
+    System.out.println(word);
+    return word;
 }
+    
+    
+} 
+       
+        
+     
+    
+
+
+          
+    
+
