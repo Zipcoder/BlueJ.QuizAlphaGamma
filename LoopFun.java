@@ -28,13 +28,11 @@ public class LoopFun
       public String acronym(String phrase) {
           String[] splitPhrase = phrase.split("\\s+");
           String acronym = "";
-          for (int i = 1; i < splitPhrase.length; i++){
-              String firstLetter = firstLetter.charAt(1);
-              acronym = acronym + firstLetter;
+          for (int i = 0; i < splitPhrase.length; i++){
+              splitPhrase[i]=splitPhrase[i].toUpperCase();
+              acronym = acronym + splitPhrase[i].charAt(0);
             }
-          
-          
-          
+                              
           return acronym;
       }
 
