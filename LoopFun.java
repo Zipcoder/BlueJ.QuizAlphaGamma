@@ -25,12 +25,18 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          StringBuilder result = new StringBuilder();
-          for(String i : phrase.split(" ")){
-              result.append(phrase.charAt(0));
+          String result = "";
+          boolean s = true;
+          for(int i = 0; i < phrase.length(); i++){
+             if(phrase.charAt(i) == ' '){
+              s = true;
+            }else if(phrase.charAt(i) != ' ' && s == true ){
+                result += (phrase.charAt(i));
+                s = false;
             }
-          return result.toString();
-      }
+        }
+          return result;
+        }
 
       /**
        * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
