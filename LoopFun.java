@@ -1,4 +1,5 @@
- 
+import java.util.Arrays;
+import java.util.*;
 
 public class LoopFun
 {
@@ -10,7 +11,12 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          int fax = 1;
+          for (int i = 2; i <= number; i++){
+              fax *= i;
+          }
+          
+          return fax;
       }
 
       /**
@@ -21,7 +27,14 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          
+          String acronym = "";
+          String[] phraseArray = phrase.split(" ");
+          for (String element : phraseArray){
+              acronym += element.charAt(0);
+            }
+          
+          return acronym.toUpperCase();
       }
 
       /**
@@ -37,6 +50,20 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String[] letterArray = word.split("");
+          String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c"};
+          ArrayList<String> alteredArray = new ArrayList<String>();
+          
+          for (int i = 0; i < letterArray.length; i++){
+              int indx = Arrays.asList(alphabet).indexOf(letterArray[i]);
+              alteredArray.add(alphabet[indx + 3]);
+            }
+ 
+          String finalString = "";
+          for (String s : alteredArray){
+              finalString += s;
+            }
+         
+          return finalString;
       }
 }
