@@ -1,11 +1,11 @@
-
+import java.util.Scanner;
 public class StringUtilities {
     /**
      * @param input value to be returned
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,9 +14,9 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        return baseValue.concat(valueToBeAdded);
     }
-
+     
     /**
      * @param valueToBeReversed value to be reversed
      * @return identical string with characters in opposite order

@@ -1,4 +1,4 @@
- 
+ import java.util.Scanner;
 
 public class LoopFun
 {
@@ -10,7 +10,9 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          if (number == 0)
+          return 1;
+          return number*factorial(number-1);
       }
 
       /**
@@ -37,6 +39,9 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
+          var encryptedstr = ' ';
+          var code = 0;
+          
           return null;
       }
 }
