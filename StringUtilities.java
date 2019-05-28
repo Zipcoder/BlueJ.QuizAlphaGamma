@@ -79,8 +79,6 @@ public class StringUtilities {
         Integer mySpace = 0;
         Character myChar;
         
-   
-        
         for (Integer i = 0; i < sentence.length() - 2; i++) {
             myChar = sentence.charAt(i);
             if (myChar.equals(" ")) {
@@ -88,6 +86,10 @@ public class StringUtilities {
             }
         }
             
+        for (Integer i = mySpace + 1; i < sentence.length();  i++) {
+            myStr = myStr + sentence.charAt(i);
+        }
+        
         myStr.trim();
         return myStr;
     }
