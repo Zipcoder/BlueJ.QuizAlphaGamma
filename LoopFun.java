@@ -10,7 +10,9 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          Integer answer=1;
+          for(int i=1;i<=number;i++) answer*=i;
+          return answer;
       }
 
       /**
@@ -21,7 +23,15 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          phrase=phrase.toUpperCase();
+          StringBuilder myBuilder=new StringBuilder("");
+          if(Character.isLetter(phrase.charAt(0))) myBuilder.append(phrase.charAt(0));
+          for(int i=2;i<phrase.length();i++){
+              if(Character.isLetter(phrase.charAt(i))&&phrase.charAt(i-1)==' '){
+                  myBuilder.append(phrase.charAt(i));
+                }
+            }
+          return myBuilder.toString();
       }
 
       /**
@@ -37,6 +47,42 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          StringBuilder myBuilder = new StringBuilder("");
+          for(int i=0;i<word.length();i++){
+                if (Character.isLetter(word.charAt(i))){
+                    switch (word.charAt(i)){
+                        case 'z':{
+                            myBuilder.append('c');
+                            break;
+                        }
+                        case 'Z':{
+                            myBuilder.append('C');
+                            break;
+                        }
+                        case 'y':{
+                            myBuilder.append('b');
+                            break;
+                        }
+                        case 'Y':{
+                            myBuilder.append('B');
+                            break;
+                        }
+                        case 'x':{
+                            myBuilder.append('a');
+                            break;
+                        }
+                        case 'X':{
+                            myBuilder.append('X');
+                            break;
+                        }                        
+                        default:{
+                            char tempChar = (char)(word.charAt(i)+3);
+                            myBuilder.append(tempChar);
+                            break;
+                        }
+                    }
+                } else myBuilder.append(word.charAt(i));
+            }
+          return myBuilder.toString();
       }
 }
