@@ -19,7 +19,7 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+      return baseValue + valueToAdd;
   }
 
   /**
