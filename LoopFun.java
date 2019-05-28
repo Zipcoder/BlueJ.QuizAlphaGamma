@@ -1,4 +1,4 @@
- 
+
 
 public class LoopFun
 {
@@ -50,6 +50,19 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
+          String result = "";
+          char[] wordArr = word.toCharArray();
+          
+          /*for (int i = 0; i < wordArr.length ; i++){ 
+              char c = wordArr[i];
+              if (c != 'w' || c != x || c != y c != z){
+              c += 3;//do encoding here
+              result += c;} else {
+                ///
+                }
+            }
+          return String.valueOf(result);*/
           return null;
-      }
+        }
+      
 }
