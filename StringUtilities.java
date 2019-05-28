@@ -5,7 +5,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +14,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        return baseValue + valueToBeAdded;
     }
 
     /**
@@ -22,7 +22,10 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        StringBuilder toReverse = new StringBuilder(valueToBeReversed);
+        String reversed = toReverse.reverse().toString();
+        
+        return reversed;
     }
 
     /**
@@ -30,7 +33,17 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        char middleChar;
+        int length = word.length();
+        
+        if (length % 2 == 1){
+            middleChar = word.charAt((length/2));
+        } else {
+            middleChar = word.charAt((length/2) - 1);
+        }
+        
+        
+        return middleChar;
     }
 
     /**
@@ -39,7 +52,10 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String remove = charToRemove.toString();
+        String newString = value.replace(remove, "");
+        
+        return newString;
     }
 
     /**
@@ -47,6 +63,8 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        String sentenceArray[] = sentence.split(" ");
+        String lastWord = sentenceArray[sentenceArray.length - 1];
+        return lastWord;
     }
 }
