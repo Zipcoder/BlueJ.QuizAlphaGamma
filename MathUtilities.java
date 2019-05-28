@@ -49,6 +49,7 @@ public class MathUtilities{
   }
 
 
+  
   /**
    * Multiply the number by itself
    * @param number the number given
