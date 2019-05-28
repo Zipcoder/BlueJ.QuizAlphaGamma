@@ -77,14 +77,15 @@ public class StringUtilities {
     public String getLastWord(String sentence) {
         String myStr = "";
         Integer mySpace = 0;
+        Character myChar;
         
-        
-        // Not Finished
+   
         
         for (Integer i = 0; i < sentence.length() - 2; i++) {
-     //       if (sentence.charAt(i) == " ") {
-     //           mySpace = i;
-     //       }
+            myChar = sentence.charAt(i);
+            if (myChar.equals(" ")) {
+                mySpace = i;
+            }
         }
             
         myStr.trim();
