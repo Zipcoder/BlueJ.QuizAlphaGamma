@@ -1,5 +1,5 @@
  
-
+import java.io.*;
 public class LoopFun
 {
 
@@ -10,7 +10,13 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          
+          int fact = 1;
+          for (int i = 1; i <=number; i++) 
+          {
+              fact = fact * i;
+            }
+          return fact;
       }
 
       /**
@@ -21,7 +27,24 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String word = "";
+          String acronym = "";
+          int x;
+          int y;
+          char c;
+          int count = 1;
+          x = 0;
+          acronym += Character.toUpperCase(phrase.charAt(x));
+          while(x < phrase.length())
+          {
+              if(phrase.charAt(x) == ' ' && count <= 3)
+              {
+                  count++;
+                  acronym += Character.toUpperCase(phrase.charAt(x + 1));
+                }
+                ++x;
+            }
+          return acronym;
       }
 
       /**
