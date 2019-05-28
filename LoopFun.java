@@ -51,12 +51,20 @@ public class LoopFun
       public String encrypt(String word) {
           char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
           char[] wordArr = word.toCharArray();
-          String  asdf = "";
+          String  newWord = "";
+          char letter = ' ';
           for (int i = 0; i < wordArr.length; i++) {
-            char letter = wordArr[i];
-          asdf = word.replace(letter,'Q');
-            
+            letter = wordArr[i];
+            for(int j = 0; j <alphabet.length; j++) {
+                if(letter == alphabet[j]) {
+                letter = alphabet[j+3];
+                newWord += letter;
+                }
             }
-          return asdf;
+
+
+                }
+          return newWord;
+
       }
 }
