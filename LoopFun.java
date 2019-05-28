@@ -31,6 +31,7 @@ public class LoopFun
               acronym += word.charAt(0);
               System.out.println(acronym);
             }
+          acronym = acronym.toUpperCase();
           
           return acronym;
       }
@@ -48,7 +49,9 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          
+         
           return null;
-      }
+    }
+          
+      
 }
