@@ -28,7 +28,10 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+      Double ans;
+      number = number / 2;
+      ans = number.doubleValue();
+      return ans;
   }
 
   /**
