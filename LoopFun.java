@@ -1,4 +1,4 @@
- 
+
 
 public class LoopFun
 {
@@ -26,9 +26,7 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          
-          
-          return null;
+         return null;
       }
 
       /**

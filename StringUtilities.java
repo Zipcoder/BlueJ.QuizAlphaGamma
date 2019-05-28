@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 
 
 public class StringUtilities {
@@ -38,7 +39,13 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        
+        int x = word.length();
+        int y= x/2;
+        char really = word.charAt(y);
+        
+        
+        return really;
     }
 
     /**
@@ -47,6 +54,8 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
+        char x = charToRemove.charValue();
+        
         
         return null;
     }
@@ -56,6 +65,10 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int x = sentence.lastIndexOf(" ");
+        int y = sentence.length();
+        
+        String word = sentence.substring(x+1,y);
+        return word;
     }
 }
