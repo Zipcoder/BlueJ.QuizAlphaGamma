@@ -9,7 +9,8 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Integer add(Integer baseValue, Integer valueToAdd){
-      return null;
+      Integer result = baseValue + valueToAdd;
+      return result;
   }
 
   /**
@@ -19,7 +20,8 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+      Double result = baseValue + valueToAdd;
+      return result;
   }
 
   /**
