@@ -25,7 +25,8 @@ public class LoopFun
       public String acronym(String phrase) {
           phrase=phrase.toUpperCase();
           StringBuilder myBuilder=new StringBuilder("");
-          for(int i=1;i<phrase.length();i++){
+          if(Character.isLetter(phrase.charAt(0))) myBuilder.append(phrase.charAt(0));
+          for(int i=2;i<phrase.length();i++){
               if(Character.isLetter(phrase.charAt(i))&&phrase.charAt(i-1)==' '){
                   myBuilder.append(phrase.charAt(i));
                 }
