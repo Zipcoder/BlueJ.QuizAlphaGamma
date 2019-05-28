@@ -7,10 +7,10 @@ public class LoopFun
        * Given a number, return the factorial of that number.
        * For example, given 5, the factorial is 5 x 4 x 3 x 2 x 1 which should return 120.
        * @param number
-       * @return the factorial of the number
+       * @ return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          
       }
 
       /**
