@@ -9,21 +9,25 @@ public class MathUtilitiesHalfTest {
     private MathUtilities utilities;
     private static final double DELTA = 0.009; // allows a margin of error
 
-    @Before
+    @org.junit.Before
     public void setup(){
         utilities = new MathUtilities();
     }
 
-    @Test
+    @org.junit.Test
     public void test1(){
         //Given
         double expected = 2.0;
 
         //When
         double actual = utilities.half(4);
+        
+        
+        MathUtilities c = new MathUtilities();
 
         //Then
-        assertEquals(expected, actual, DELTA);
+       
+        assertEquals(expected, actual, 0.009);
     }
 
     

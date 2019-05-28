@@ -15,9 +15,15 @@ public class MathUtilitiesIsOddTest {
     }
 
     @Test
-    public void testIsOddForOddNumber(){
+    public void testIsOddForOddNumber(int start, int stop){
+        String string ="";
+        for( int i = start; i < stop; i ++)
+        if(i%2 == 1) {
+            string += i;
+        
         assertTrue(utilities.isOdd(7));
-    }
+    } }
+    
 
     @Test
     public void testIsOddForEvenNumber(){

@@ -10,27 +10,33 @@ public class MathUtilitiesAddTest
     private MathUtilities utilities;
     private static final double DELTA = 0.009;
 
-    @Before
+    @org.junit.Before
     public void setup(){
-        utilities = new MathUtilities();
+        utilities = new MathUtilities(); 
     }
 
-    @Test
+    @org.junit.Test
     public void testAddInteger(){
         //Given
         int expected = 15;
-
+        int x = 7;
+        int y = 8;
         //When
-        int actual = utilities.add(7, 8);
-
+        int actual = utilities.add(x,y);
+       
         //Then
         assertEquals(expected, actual);
+       
+  
+        
     }
 
-    @Test
+    @org.junit.Test
     public void testAddDouble(){
         //Given
         double expected = 11.22;
+      
+        
 
         //When
         double actual = utilities.add(10.0, 1.22);

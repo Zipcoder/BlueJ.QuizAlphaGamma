@@ -18,11 +18,13 @@ public class StringUtilsReturnInput {
         // given
         String input = "Deshret";
         String expected = input;
-
+        
+        System.out.println("Deshret");
+        
         // when
         String actual = utilities.returnInput(input);
 
-        // then
+        // then 
         Assert.assertEquals(expected, actual);
     }
 

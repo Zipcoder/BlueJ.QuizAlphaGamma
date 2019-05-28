@@ -1,4 +1,4 @@
- 
+  
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -27,6 +27,7 @@ public class LoopFunEncryptTest
 
         //Then
         assertEquals(expected, actual);
+        
     }
 
     @Test
