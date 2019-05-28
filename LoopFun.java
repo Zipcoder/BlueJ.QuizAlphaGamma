@@ -56,7 +56,7 @@ public class LoopFun
           for (int i = 0; i < wordArr.length; i++) {
             letter = wordArr[i];
             for(int j = 0; j <alphabet.length; j++) {
-                if(letter == alphabet[j]) {
+                if(wordArr[i] == alphabet[j]) {
                     if(j > 22) {
                         int x = (j+3)-26;
                         letter = alphabet[x];
