@@ -51,10 +51,10 @@
        */
       public String encrypt(String word) {
           char[] encrypt = word.toCharArray();
-          for (char letter : encrypt) {
-              letter += 3;
-              if (letter > 'z'){
-                  letter -= 26;
+          for (int i = 0; i < encrypt.length; i++) {
+              encrypt[i] += 3;
+              if(encrypt[i] > 'z'){
+                  encrypt[i] -= 26;
               }
           }
           return String.valueOf(encrypt);
