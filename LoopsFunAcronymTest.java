@@ -50,7 +50,8 @@ public class LoopsFunAcronymTest {
         //Then
         assertEquals(expected, actual);
     }
-
+    
+    @Test
     public void test6() {
         // given
         String phrase = "Center Disease Control Whistle Blower";
@@ -62,7 +63,8 @@ public class LoopsFunAcronymTest {
         // then
         assertEquals(expected, actual);
     }
-
+    
+    @Test
     public void test7() {
         // given
         String phrase = "Tuskegee Macon County, Alabama";
@@ -74,7 +76,8 @@ public class LoopsFunAcronymTest {
         // then
         assertEquals(expected, actual);
     }
-
+    
+    @Test
     public void test8() {
         // given
         String phrase = "John Charles Cutler";
@@ -99,7 +102,8 @@ public class LoopsFunAcronymTest {
         // Then
         assertEquals(expected, actual);
     }
-
+    
+    @Test
     public void test4() {
         // given
         String phrase = "Tactical Reconnaissance Nuclear Powered Aerospace Platform";
