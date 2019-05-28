@@ -30,7 +30,8 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        if (word.length()%2==0)return'!';
+        return word.charAt((word.length()-1)/2);
     }
 
     /**
