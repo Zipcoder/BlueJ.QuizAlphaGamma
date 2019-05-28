@@ -53,7 +53,7 @@ public class StringUtilities {
     public String getLastWord(String sentence) {
         for(int i = sentence.length(); i > 0; i--){
             if(sentence.substring(i - 1, i).equals(" ")){
-                return sentence.substring(i - 1);
+                return sentence.substring(i);
             }
         }
         return "";
