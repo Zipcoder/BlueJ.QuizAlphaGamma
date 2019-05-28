@@ -54,9 +54,6 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        char x = charToRemove.charValue();
-        
-        
         return null;
     }
 
