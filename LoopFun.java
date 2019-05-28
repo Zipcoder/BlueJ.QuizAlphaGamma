@@ -49,7 +49,14 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
+         StringBuilder encrypted = new StringBuilder(word);
+         String alphabet = "abcdefghijklmnopqrstuvwxyz";
          
+         for (int i = 0; i < encrypted.length(); i++) {    
+             char currentChar = encrypted.charAt(i);    
+             int index = alphabet.indexOf(currentChar);
+            }
+             
           return null;
     }
           
