@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class StringUtilities {
     /**
@@ -5,7 +7,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +16,8 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String sum = baseValue.concat(valueToBeAdded);
+        return sum;
     }
 
     /**
@@ -22,7 +25,12 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+       String rev = "";
+       for(int x = valueToBeReversed.length()-1; x>=0; x--){
+        rev = rev + valueToBeReversed.charAt(x);
+        
+        }
+       return rev;
     }
 
     /**
@@ -39,6 +47,7 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
+        
         return null;
     }
 
