@@ -32,7 +32,10 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        int middle = word.length() / 2;
+        char characters[]=word.toCharArray();
+        return characters[middle];   
+        //not seeing a test method for this will come back and create
     }
 
     /**
@@ -49,6 +52,6 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        return sentence.substring(sentence.lastIndexOf(" ")+1);
     }
 }
