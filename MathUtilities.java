@@ -30,7 +30,8 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+      Double result = number / 2.0;
+      return result;
   }
 
   /**
