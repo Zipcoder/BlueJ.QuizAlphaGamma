@@ -1,6 +1,7 @@
 
 
-public class StringUtilities {
+public class StringUtilities 
+{
     /**
      * @param input value to be returned
      * @return `input`
@@ -43,8 +44,22 @@ public class StringUtilities {
      */
     public Character getMiddleCharacter(String word) 
     {
+        Character answer;
+        int position;
+        int length;
+        if (word.length() % 2 == 0)
+        {
+            position = word.length() / 2 -1;
+            length = 2;
+        }
+        else
+        {
+            position = word.length() / 2;
+            length = 1;
+        }
         
-        return null;
+        answer = (word.substring(position, position + length)).charAt(0);
+        return answer;
     }
 
     /**
@@ -54,8 +69,10 @@ public class StringUtilities {
      */
     public String removeCharacter(String value, Character charToRemove) 
     {
+        String answerConvert = String.valueOf(charToRemove); //convert Character to String
+        String answer = value.replace(answerConvert, "");
         
-        return null;
+        return answer;
     }
 
     /**
@@ -64,7 +81,7 @@ public class StringUtilities {
      */
     public String getLastWord(String sentence) 
     {
-        
-        return null;
+        String answer = sentence.substring(sentence.lastIndexOf(" ") + 1);
+        return answer;
     }
 }
