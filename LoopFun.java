@@ -1,4 +1,4 @@
- 
+// This is to unmark for test 
 
 public class LoopFun
 {
@@ -25,7 +25,25 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String result = "";
+          boolean endOfWord = true;
+          Integer index = 0;
+          
+          do {
+              if((phrase.charAt(index) != ' ') && (endOfWord == true)){
+                  // Add to result
+                  result += phrase.charAt(index);
+                  endOfWord = false;
+              }
+              
+              if(phrase.charAt(index) == ' ') endOfWord = true;
+              
+              index++;
+          } while (index < phrase.length());
+          
+          result = result.toUpperCase();
+          
+          return result;
       }
 
       /**
@@ -41,6 +59,126 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          //get numeric value
+          //+ 3 to numeric value
+          //return new char at current value to Chars
+          
+          String result = "";
+          
+          for(int i = 0; i < word.length(); i++) {
+              
+              switch (word.charAt(i)) {
+                 case 'a':
+                    result += 'd';
+                    break;
+                    
+                 case 'b':
+                    result += 'e';
+                    break;
+                    
+                 case 'c':
+                    result += 'f';
+                    break;
+                    
+                 case 'd':
+                    result += 'g';
+                    break;
+                    
+                 case 'e':
+                    result += 'h';
+                    break;
+                    
+                 case 'f':
+                    result += 'i';
+                    break;
+                    
+                 case 'g':
+                    result += 'j';
+                    break;
+                    
+                 case 'h':
+                    result += 'k';
+                    break;
+                    
+                 case 'i':
+                    result += 'l';
+                    break;
+                    
+                 case 'j':
+                    result += 'm';
+                    break;
+                    
+                 case 'k':
+                    result += 'n';
+                    break;
+                    
+                 case 'l':
+                    result += 'o';
+                    break;
+                    
+                 case 'm':
+                    result += 'p';
+                    break;
+                    
+                 case 'n':
+                    result += 'q';
+                    break;
+                    
+                 case 'o':
+                    result += 'r';
+                    break;
+                    
+                 case 'p':
+                    result += 's';
+                    break;
+                    
+                 case 'q':
+                    result += 't';
+                    break;
+                    
+                 case 'r':
+                    result += 'u';
+                    break;
+                    
+                 case 's':
+                    result += 'v';
+                    break;
+                    
+                 case 't':
+                    result += 'w';
+                    break;
+                    
+                 case 'u':
+                    result += 'x';
+                    break;
+                    
+                 case 'v':
+                    result += 'y';
+                    break;
+                    
+                 case 'w':
+                    result += 'z';
+                    break;
+                    
+                 case 'x':
+                    result += 'a';
+                    break;
+                    
+                 case 'y':
+                    result += 'b';
+                    break;
+                    
+                 case 'z':
+                    result += 'c';
+                    break;
+                    
+                    default:
+                        break;
+                        
+              }
+                    
+          }
+          
+          return result;
       }
 }
