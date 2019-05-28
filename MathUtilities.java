@@ -40,7 +40,9 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      return null;
+      Boolean result = false;
+      if(number % 2 == 1) result = true;
+      return result;
   }
 
 
