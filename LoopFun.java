@@ -53,16 +53,23 @@ public class LoopFun
           String result = "";
           char[] wordArr = word.toCharArray();
           
-          /*for (int i = 0; i < wordArr.length ; i++){ 
+          for (int i = 0; i < wordArr.length ; i++){ 
               char c = wordArr[i];
-              if (c != 'w' || c != x || c != y c != z){
+              if (c != 'x' || c != 'y' || c != 'z'){
               c += 3;//do encoding here
               result += c;} else {
-                ///
+                if (c == 'x'){
+                    result += "a";
+                } else if (c == 'y'){
+                    result += "b";
+                } else if (c == 'z') {
+                    result += "c";
                 }
+                ///
+                
             }
-          return String.valueOf(result);*/
-          return null;
+        }
+          return String.valueOf(result);
         }
       
 }
