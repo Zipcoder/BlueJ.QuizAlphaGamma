@@ -57,19 +57,17 @@ public class LoopFun
               char c = wordArr[i];
               if (c != 'x' || c != 'y' || c != 'z'){
               c += 3;//do encoding here
-              result += c;} else {
+              result += c;} else 
                 if (c == 'x'){
-                    result += 'a';
+                    result += "a";
                 } else if (c == 'y'){
-                    result += 'b';
+                    result += "b";
                 } else if (c == 'z') {
-                    result += 'c';
-                }
-                ///
-                
+                    result += "c";
+                }   
             }
-        }
-          return String.valueOf(result);
+        
+          return result;
         }
       
 }
