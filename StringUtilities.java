@@ -1,11 +1,13 @@
-
+import java.util.Scanner;
 public class StringUtilities {
     /**
      * @param input value to be returned
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        Scanner in = new Scanner(System.in);
+        input = in.nextLine();
+        return input;
     }
 
     /**
@@ -14,7 +16,11 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        Scanner in = new Scanner(System.in);
+        baseValue= in.nextLine(); 
+        valueToBeAdded= in.nextLine();
+        String concatenate= baseValue + valueToBeAdded;
+        return concatenate;
     }
 
     /**
@@ -22,7 +28,12 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        Scanner in = new Scanner(System.in);
+        valueToBeReversed= in.nextLine();
+        String reverse= new StringBuffer(valueToBeReversed).reverse().toString();
+        
+        
+        return reverse;
     }
 
     /**
@@ -30,8 +41,15 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        Scanner in = new Scanner(System.in);
+        word= in.nextLine();
+        int stringLength = word.length(); 
+        int middle = stringLength/2; 
+        char c= word.charAt(middle);
+        
+        return c;
     }
+   
 
     /**
      * @param value value to have character removed from
@@ -39,7 +57,11 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        Scanner in= new Scanner(System.in);
+        value= in.nextLine();
+        value = value.replace(in.nextLine(), "");
+        
+        return value;
     }
 
     /**
@@ -47,6 +69,9 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        Scanner in = new Scanner(System.in);
+        sentence= in.nextLine();
+        String lastWord = sentence.substring(sentence.lastIndexOf(" ") +1);
+        return lastWord;
     }
 }

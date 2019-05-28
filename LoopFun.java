@@ -1,5 +1,6 @@
  
-
+import java.util.Scanner;
+import java.lang.StringBuilder;
 public class LoopFun
 {
 
@@ -10,7 +11,13 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          Scanner in = new Scanner(System.in);
+          Integer fact = 1;
+          number= in.nextInt();
+          for (int i =2; i <= number; i++){
+              fact = fact * i;
+            }
+          return fact;
       }
 
       /**
@@ -21,7 +28,18 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          Scanner in= new Scanner(System.in);
+          phrase= in.nextLine();
+          char current = phrase.charAt(0);
+          StringBuilder acro = new StringBuilder();
+          String acronym = "";
+          acro.append(current);
+          for (int i =1; i < phrase.length()-1; i++){
+               final char nextChar = phrase.charAt(i);
+               current += nextChar;
+               i++;
+            }
+          return acro.toString().toUpperCase();
       }
 
       /**
