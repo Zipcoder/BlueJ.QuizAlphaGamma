@@ -42,9 +42,14 @@ public class LoopFun
                * @return the encrypted string by shifting each character by three character
                */
               public String encrypt(String word) {
-                  String result = "";
-                  for (int i = 0; i < word.length(); i++) {
-                      result = result + word.charAt(i + 3);
-               } return result;
+                char[] charArray = word.toCharArray();
+                for(int i = 0; i < charArray.length; i++){
+                    if (charArray[i] >= 'x'){
+                        charArray[i] -= 23;
+                    } else {
+                        charArray[i] += 3;
+                    }
+                }
+                return String.valueOf(charArray);
             }
 }
