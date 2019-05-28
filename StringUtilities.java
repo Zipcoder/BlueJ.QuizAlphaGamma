@@ -44,10 +44,10 @@ public class StringUtilities {
      */
     public String removeCharacter(String value, Character charToRemove) {
         int index = value.indexOf(charToRemove);
-        System.out.println(index + " index");
-        // need to do an if in case index = 0
-        return value.substring(0, index) + value.substring(index + 1);  
+        System.out.println("index is " + index);
         
+        return value.substring(0, index) + value.substring(index + 1);  
+    
     }
 
     /**
