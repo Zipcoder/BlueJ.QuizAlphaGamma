@@ -3,8 +3,7 @@ import java.util.Scanner;
 import java.lang.StringBuilder;
 public class LoopFun
 {
-
-      /**
+   /**
        * Given a number, return the factorial of that number.
        * For example, given 5, the factorial is 5 x 4 x 3 x 2 x 1 which should return 120.
        * @param number
@@ -19,7 +18,7 @@ public class LoopFun
             }
           return fact;
       }
-
+      
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
        * the first character of each word in upper case.
@@ -50,16 +49,13 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          char [] toEncrypt = word.toCharArray(); 
-         
-          for (int i =0; i < toEncrypt.length; i++){
-              if (Character.isLetter(toEncrypt[i])){
-                  toEncrypt[i] += 3;
-          
-          
-         
+          String enc = "";
+          for (char c: word.toCharArray()){
+               enc += Character.toString((char) (((c- 'a' + 3) % 26) + 'a'));
+                  
                 } 
-                word = String.valueOf(toEncrypt);
-            }return word;
+          return  enc;
+ }
 }
-}
+
+
