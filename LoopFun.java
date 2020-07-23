@@ -1,18 +1,24 @@
  
-
+import java.util.Scanner;
+import java.lang.StringBuilder;
 public class LoopFun
 {
-
-      /**
+   /**
        * Given a number, return the factorial of that number.
        * For example, given 5, the factorial is 5 x 4 x 3 x 2 x 1 which should return 120.
        * @param number
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+         
+          Integer fact = 1;
+          
+          for (int i =2; i <= number; i++){
+              fact = fact * i;
+            }
+          return fact;
       }
-
+      
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
        * the first character of each word in upper case.
@@ -21,8 +27,14 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
-      }
+         
+          String [] acro = phrase.split(" ");
+          StringBuilder ac = new StringBuilder();
+            for (int i=0; i < acro.length; i++){
+                ac.append( acro[i].charAt(0));
+                
+            } return ac.toString().toUpperCase();
+    }
 
       /**
        * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
@@ -37,6 +49,13 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
-      }
+          String enc = "";
+          for (char c: word.toCharArray()){
+               enc += Character.toString((char) (((c- 'a' + 3) % 26) + 'a'));
+                  
+                } 
+          return  enc;
+ }
 }
+
+
