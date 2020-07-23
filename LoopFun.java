@@ -1,4 +1,4 @@
- 
+
 
 public class LoopFun
 {
@@ -10,8 +10,13 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
-      }
+          Integer x = 1;
+          Integer y = 1;
+          for (x =1; x <=number; x++){
+          y = y * x;
+        }
+          return y;
+        }
 
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
@@ -21,7 +26,7 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+         return null;
       }
 
       /**

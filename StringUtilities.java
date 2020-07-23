@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.io.*;
+
 
 public class StringUtilities {
     /**
@@ -5,7 +8,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +17,8 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String sum = baseValue.concat(valueToBeAdded);
+        return sum;
     }
 
     /**
@@ -22,7 +26,12 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+       String rev = "";
+       for(int x = valueToBeReversed.length()-1; x>=0; x--){
+        rev = rev + valueToBeReversed.charAt(x);
+        
+        }
+       return rev;
     }
 
     /**
@@ -30,7 +39,13 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        
+        int x = word.length();
+        int y= x/2;
+        char really = word.charAt(y);
+        
+        
+        return really;
     }
 
     /**
@@ -47,6 +62,10 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int x = sentence.lastIndexOf(" ");
+        int y = sentence.length();
+        
+        String word = sentence.substring(x+1,y);
+        return word;
     }
 }
