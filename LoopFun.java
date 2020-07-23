@@ -7,11 +7,16 @@ public class LoopFun
        * Given a number, return the factorial of that number.
        * For example, given 5, the factorial is 5 x 4 x 3 x 2 x 1 which should return 120.
        * @param number
-       * @return the factorial of the number
+       * @ return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
-      }
+          Integer factorial = 1;
+          
+          for(int i=1; i <= number; i++){
+                factorial =factorial * i;
+            }
+            return factorial;
+        }
 
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
@@ -21,7 +26,14 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String acronym = "";
+          for (String word : phrase.split(" ")) {
+              acronym += word.charAt(0);
+              System.out.println(acronym);
+            }
+          acronym = acronym.toUpperCase();
+          
+          return acronym;
       }
 
       /**
@@ -37,6 +49,21 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
-      }
-}
+        //char[] letters = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c'};
+        String output = "";
+        int length = word.length();
+            for(int i = 0; i < length; i++){
+                char current = (char)(word.charAt(i) + 3);
+                if (current > 'z')
+                output += (char)(word.charAt(i) - (26-3));
+            else
+                output += (char)(word.charAt(i) + 3);
+            }
+        return output;
+         
+         }
+        }
+      
+          
+      
+
